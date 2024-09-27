@@ -1,8 +1,7 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Favorites</title>
-    <link rel=”canonical” href=”https://webosu.online/”/>
+  <head>
+    <title>Favorites - WebOsu!</title>
     <meta name="description" content="Take a look at all your favorite beatmaps on webosu!">
     <link rel="icon" href="img/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,121 +14,120 @@
     <script src="js/settings.js"></script>
     <script src="js/jsloader.js"></script>
     <script src="js\lib\localforage.min.js"></script>
-<script>console.log('localforage is: ', localforage);</script>
-</head>
-<body>
+  <script>console.log('localforage is: ', localforage);</script>
+  </head>
+  <body>
     <div class="game-area" id="game-area" hidden>
     </div>
     <div class="pause-menu" id="pause-menu" hidden>
-        <div class="paused-title">Paused</div>
-        <div class="button-list">
-            <div class="pausebutton continue" id="pausebtn-continue">
-                <div class="inner">Continue</div>
-            </div>
-            <div class="pausebutton retry" id="pausebtn-retry">
-                <div class="inner">Retry</div>
-            </div>
-            <div class="pausebutton quit" id="pausebtn-quit">
-                <div class="inner">Quit</div>
-            </div>
+      <div class="paused-title">Paused</div>
+      <div class="button-list">
+        <div class="pausebutton continue" id="pausebtn-continue">
+          <div class="inner">Continue</div>
         </div>
+        <div class="pausebutton retry" id="pausebtn-retry">
+          <div class="inner">Retry</div>
+        </div>
+        <div class="pausebutton quit" id="pausebtn-quit">
+          <div class="inner">Quit</div>
+        </div>
+      </div>
     </div>
     <!--Nav Bar-->
     <nav id="main-nav">
-        <div class="nav-link">
-            <a href="index.html" class="brand">webosu!</a>
-            <a href="new.html" class="pseudo button">New</a>
-            <a href="hot.html" class="pseudo button">Popular</a>
-            <a href="browse.html" class="pseudo button">Browse</a>
-        </div>
-        <div class="nav-search">
-            <form action="search.html">
-                <container id="searchbar" class="searchbar">
-                    <input type="text" name="q" placeholder="Seach for beatmap or enter a Set ID" />
-                </container>
-            </form>
-        </div>
-        <div class="nav-tool">
-            <a href="liked.html" class="pseudo button">Favorites</a>
-            <a href="settings.html" class="pseudo button">Settings</a>
-            <input type="username" id="userreg" placeholder="Type your name" />
-        </div>
+      <div class="nav-link"></div>
+        <a href="settings.html" class="pseudo button"><img src="img/settings.png" width="25" height="25"></a>
+        <a href="new.html" class="pseudo button">New</a>
+        <a href="hot.html" class="pseudo button">Popular</a>
+        <a href="browse.html" class="pseudo button">Browse</a>
+        <a href="liked.html" class="pseudo button active">Favorites</a>
+      </div>
+      <div class="nav-search">
+        <form action="search.html">
+          <container id="searchbar" class="searchbar">
+            <input type="text" name="q" placeholder="Seach for beatmap or enter a Set ID">
+          </container>
+        </form>
+      </div>
+      <div class="nav-link">
+        <input type="username" id="userreg" placeholder="Type your name">
+      </div>
     </nav>
     <div class="main-page" id="main-page">
-        <div class="main-content">
-            <div class="announcement">
-                To save the username just type it in the top right & press enter! Join the <a href="https://discord.gg/v7wBtSdYzx">Discord</a> and share your scores!
-            </div>
-            <div class="announcement">
-                Thank you so much to everyone who has been involved with webosu!, especially Lemres who has kept this ship afloat for like 2 years while I did nothing lol
-            </div>
-            <br>
-            <div class="beatmap-list" id="beatmap-list">
-                <!-- to be filled in script -->
-            </div>
-            <!-- <div class="side-panel">to be activated in script</div> -->
-            <div class="statuslines" id="statuslines">
-                <div class="progress" id="script-progress">
-                    Scripts
-                    <div class="lds-dual-ring"></div>
-                </div>
-                <div class="progress" id="skin-progress">
-                    Skin
-                    <div class="lds-dual-ring"></div>
-                </div>
-                <div class="progress" id="sound-progress">
-                    Hitsounds
-                    <div class="lds-dual-ring"></div>
-                </div>
-            </div>
+      <div class="main-content">
+        <div class="announcement">
+          To save the username just type it in the top right & press enter! Join the <a href="https://discord.gg/v7wBtSdYzx">Discord</a> and share your scores!
         </div>
-        <!--Footer-->
-        <footer>
-            <div class="footer">
-                <div class="footer-infos">
-                    <span class="footer-info">Join the <a href="https://discord.gg/v7wBtSdYzx">Discord server</a>!</span>
-                    <span class="footer-info">Beatmap Mirror <a href="https://catboy.best/">Mino</a></span>
-                    <span class="footer-info">Source code: <a href="https://github.com/BlaNKtext/webosu">Github></a></span>
-                </div>
-            </div>
-        </footer>
-        <script>
-//Make enter work
+        <div class="announcement">
+          Thank you so much to everyone who has been involved with webosu!, especially Lemres who has kept this ship afloat for like 2 years while I did nothing lol
+        </div>
+        <br>
+        <div class="beatmap-list" id="beatmap-list">
+          <!-- to be filled in script -->
+        </div>
+        <!-- <div class="side-panel">to be activated in script</div> -->
+        <div class="statuslines" id="statuslines">
+          <div class="progress" id="script-progress">
+            Scripts
+            <div class="lds-dual-ring"></div>
+          </div>
+          <div class="progress" id="skin-progress">
+            Skin
+            <div class="lds-dual-ring"></div>
+          </div>
+          <div class="progress" id="sound-progress">
+            Hitsounds
+            <div class="lds-dual-ring"></div>
+          </div>
+        </div>
+      </div>
+      <!--Footer-->
+      <footer>
+        <div class="footer">
+          <div class="footer-infos">
+            <span class="footer-info">Join the <a href="https://discord.gg/v7wBtSdYzx">Discord server</a>!</span>
+            <span class="footer-info">Beatmap Mirror <a href="https://catboy.best/">Mino</a></span>
+            <span class="footer-info">Source code: <a href="https://github.com/BlaNKtext/webosu">Github></a></span>
+          </div>
+        </div>
+      </footer>
+      <script>
+  //Make enter work
     var input = document.getElementById("userreg");
-        input.addEventListener("keypress", function(event) {
-            if (event.key === "Enter") {
-        event.preventDefault();
-        saveUser();
-        }
+      input.addEventListener("keypress", function(event) {
+        if (event.key === "Enter") {
+      event.preventDefault();
+      saveUser();
+      }
     }); 
     //Store username in localstorage
-function saveUser( name ) {
+  function saveUser( name ) {
     var player = document.getElementById('userreg').value;
     document.cookie = 'username=' + player;
     console.log('Username saved!');
     }
-            if (window.localforage) {
-                window.localforage.getItem("likedsidset", function (err, val) {
-                    if (err) {
-                        alert("Error loading liked beatmap list");
-                        return;
-                    }
-                    if (val && val.size) {
-                        function addlist(startOffset, maxLength) {
-                            list = Array.from(val);
-                            list.length = Math.min(list.length, startOffset + maxLength)
-                            addBeatmapSids(list);
-                        }
-                        addlist(0, 1000);
-                        let cur = 1000;
-                    } else {
-                        document.getElementById("beatmap-list").innerText =
-                            "You haven't favorited any Beatmaps yet! Click on the heart in the lower right corner of the Beatmap to favorite it!";
-                    }
-                });
-            } else {
-                alert("Oh no, localforage isn't supported on this browser")
+        if (window.localforage) {
+          window.localforage.getItem("likedsidset", function (err, val) {
+            if (err) {
+              alert("Error loading liked beatmap list");
+              return;
             }
-        </script>
-</body>
+            if (val && val.size) {
+              function addlist(startOffset, maxLength) {
+                list = Array.from(val);
+                list.length = Math.min(list.length, startOffset + maxLength)
+                addBeatmapSids(list);
+              }
+              addlist(0, 1000);
+              let cur = 1000;
+            } else {
+              document.getElementById("beatmap-list").innerText =
+                "You haven't favorited any Beatmaps yet! Click on the heart in the lower right corner of the Beatmap to favorite it!";
+            }
+          });
+        } else {
+          alert("Oh no, localforage isn't supported on this browser")
+        }
+      </script>
+  </body>
 </html>

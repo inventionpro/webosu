@@ -1,8 +1,8 @@
-<!doctype html>
-<head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
     <html lang="en"></html>
-    <title>Popular</title>
-    <link rel=”canonical” href=”https://webosu.online/”/>
+    <title>Popular - WebOsu!</title>
     <meta name="description" content="All the most popular beatmaps from over 1 million choices!">
     <link rel="icon" href="img/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,99 +14,97 @@
     <script src="js/addbeatmaplist.js"></script>
     <script src="js/settings.js"></script>
     <script src="js/jsloader.js"></script>
-</head>
-<body>
-    <body>
-        <!--Game Area-->
-        <div class="game-area" id="game-area" hidden>
+  </head>
+  <body>
+    <!--Game Area-->
+    <div class="game-area" id="game-area" hidden></div>
+    <div class="pause-menu" id="pause-menu" hidden>
+      <div class="paused-title">Paused</div>
+      <div class="button-list">
+        <div class="pausebutton continue" id="pausebtn-continue">
+          <div class="inner">Continue</div>
         </div>
-        <div class="pause-menu" id="pause-menu" hidden>
-            <div class="paused-title">Paused</div>
-            <div class="button-list">
-                <div class="pausebutton continue" id="pausebtn-continue">
-                    <div class="inner">Continue</div>
-                </div>
-                <div class="pausebutton retry" id="pausebtn-retry">
-                    <div class="inner">Retry</div>
-                </div>
-                <div class="pausebutton quit" id="pausebtn-quit">
-                    <div class="inner">Quit</div>
-                </div>
-            </div>
+        <div class="pausebutton retry" id="pausebtn-retry">
+          <div class="inner">Retry</div>
         </div>
+        <div class="pausebutton quit" id="pausebtn-quit">
+          <div class="inner">Quit</div>
+        </div>
+      </div>
+    </div>
     <!--Nav Bar-->
     <nav id="main-nav">
-        <div class="nav-link">
-            <a href="index.html" class="brand">webosu!</a>
-            <a href="new.html" class="pseudo button">New</a>
-            <a href="hot.html" class="pseudo button">Popular</a>
-            <a href="browse.html" class="pseudo button">Browse</a>
-        </div>
-        <div class="nav-search">
-            <form action="search.html">
-                <container id="searchbar" class="searchbar">
-                    <input type="text" name="q" placeholder="Seach for beatmap or enter a Set ID" />
-                </container>
-            </form>
-        </div>
-        <div class="nav-tool">
-            <a href="liked.html" class="pseudo button">Favorites</a>
-            <a href="settings.html" class="pseudo button">Settings</a>
-            <input type="username" id="userreg" placeholder="Type your name" />
-        </div>
+      <div class="nav-link">
+        <div class="nav-link"></div>
+        <a href="settings.html" class="pseudo button"><img src="img/settings.png" width="25" height="25"></a>
+        <a href="new.html" class="pseudo button">New</a>
+        <a href="hot.html" class="pseudo button active">Popular</a>
+        <a href="browse.html" class="pseudo button">Browse</a>
+        <a href="liked.html" class="pseudo button">Favorites</a>
+      </div>
+      <div class="nav-search">
+        <form action="search.html">
+          <container id="searchbar" class="searchbar">
+            <input type="text" name="q" placeholder="Seach for beatmap or enter a Set ID">
+          </container>
+        </form>
+      </div>
+      <div class="nav-link">
+        <input type="username" id="userreg" placeholder="Type your name">
+      </div>
     </nav>
-        <div class="main-page" id="main-page">
-            <div class="main-content">
-                <div class="announcement">
-                To save the username just type it in the top right & press enter! Join the <a href="https://discord.gg/v7wBtSdYzx">Discord</a> and share your scores!
-                </div>
-                <div class="announcement">
-                Thank you so much to everyone who has been involved with webosu!, especially Lemres who has kept this ship afloat for like 2 years while I did nothing lol
-                </div>
-                <br>
-            <div class="beatmap-list" id="beatmap-list">
-                <!-- to be filled in script -->
-            </div>
-            <div class="button" style="width:100%; margin-bottom: 10px;" id="btnmore">Load More</div>
+    <div class="main-page" id="main-page">
+      <div class="main-content">
+        <div class="announcement">
+        To save the username just type it in the top right & press enter! Join the <a href="https://discord.gg/v7wBtSdYzx">Discord</a> and share your scores!
         </div>
-        <!-- <div class="side-panel">to be activated in script</div> -->
+        <div class="announcement">
+        Thank you so much to everyone who has been involved with webosu!, especially Lemres who has kept this ship afloat for like 2 years while I did nothing lol
+        </div>
+        <br>
+      <div class="beatmap-list" id="beatmap-list">
+        <!-- to be filled in script -->
+      </div>
+      <div class="button" style="width:100%; margin-bottom: 10px;" id="btnmore">Load More</div>
     </div>
-        <!--Loader progress-->
-        <div class="statuslines" id="statuslines">
-            <div class="progress" id="script-progress">
-                Scripts
-                <div class="lds-dual-ring"></div>
-            </div>
-            <div class="progress" id="skin-progress">
-                Skin
-                <div class="lds-dual-ring"></div>
-            </div>
-            <div class="progress" id="sound-progress">
-                Hitsounds
-                <div class="lds-dual-ring"></div>
-            </div>
+    <!-- <div class="side-panel">to be activated in script</div> -->
+    </div>
+      <!--Loader progress-->
+      <div class="statuslines" id="statuslines">
+        <div class="progress" id="script-progress">
+          Scripts
+          <div class="lds-dual-ring"></div>
         </div>
+        <div class="progress" id="skin-progress">
+          Skin
+          <div class="lds-dual-ring"></div>
+        </div>
+        <div class="progress" id="sound-progress">
+          Hitsounds
+          <div class="lds-dual-ring"></div>
+        </div>
+      </div>
     <script>
     //Make enter work
     const input = document.getElementById("userreg");
     const username = window.localStorage.getItem("username")
     if(username) input.value = username;
     input.addEventListener("keypress", function(event) {
-        if (event.key === "Enter") {
-            event.preventDefault();
-            saveUser();
-        }
+      if (event.key === "Enter") {
+        event.preventDefault();
+        saveUser();
+      }
     });
     //Store username in localstorage
     function saveUser( name ) {
-        const player = document.getElementById('userreg').value;
-        window.localStorage.setItem("username", player);
-        document.cookie = 'username=' + player;
+      const player = document.getElementById('userreg').value;
+      window.localStorage.setItem("username", player);
+      document.cookie = 'username=' + player;
       }
-        addBeatmapList("https://catboy.best/api/v2/search?q=Popular&offset=20&mode=0");
-        document.getElementById("btnmore").onclick = function () {
-            addBeatmapList(`https://catboy.best/api/v2/search?q=Popular&offset=20&mode=0`);
-        }
+      addBeatmapList("https://catboy.best/api/v2/search?q=Popular&offset=20&mode=0");
+      document.getElementById("btnmore").onclick = function () {
+        addBeatmapList(`https://catboy.best/api/v2/search?q=Popular&offset=20&mode=0`);
+      }
     </script>
-</body>
+  </body>
 </html>

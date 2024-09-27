@@ -1,6 +1,6 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head></head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home - WebOsu!</title>
@@ -36,37 +36,33 @@
     </div>
     <!--Nav Bar-->
     <nav id="main-nav">
-      <div class="nav-link">
-        <a href="index.html" class="brand">webosu!</a>
+      <div class="nav-link"></div>
+        <a href="settings.html" class="pseudo button"><img src="img/settings.png" width="25" height="25"></a>
         <a href="new.html" class="pseudo button">New</a>
         <a href="hot.html" class="pseudo button">Popular</a>
         <a href="browse.html" class="pseudo button">Browse</a>
+        <a href="liked.html" class="pseudo button">Favorites</a>
       </div>
       <div class="nav-search">
         <form action="search.html">
           <container id="searchbar" class="searchbar">
-            <input type="text" name="q" placeholder="Seach for beatmap or enter a Set ID" />
+            <input type="text" name="q" placeholder="Seach for beatmap or enter a Set ID">
           </container>
         </form>
       </div>
-      <div class="nav-tool">
-        <a href="liked.html" class="pseudo button">Favorites</a>
-        <a href="settings.html" class="pseudo button">Settings</a>
-        <input type="username" id="userreg" placeholder="Type your name" />
+      <div class="nav-link">
+        <input type="username" id="userreg" placeholder="Type your name">
       </div>
     </nav>
     <div class="main-page" id="main-page">
       <div class="main-content">
         <div class="announcement">
-          To save the username just type it in the top right & press enter! Join the <a href="https://discord.gg/v7wBtSdYzx">Discord</a> and share your scores!
-        </div>
-        <div class="announcement">
-          Thank you so much to everyone who has been involved with webosu!, especially Lemres who has kept this ship afloat for like 2 years while I did nothing lol
+          To save the username just type it in the top right & press enter!
         </div>
         <br>
         <!-- <div class="index-area">
           <h2>Live plays</h2>
-          <hr/>
+          <hr>
           <table>
             <thead>
               <tr>
@@ -87,7 +83,7 @@
         <div class="index-area">
           <h2>Popular beatmaps</h2>
           <a href="hot.html" class="more">See more Popular Beatmaps</a>
-          <hr/>
+          <hr>
           <div class="beatmap-list" id="beatmap-list-hot">
           <!-- Beatmaps will be here -->
           </div>
@@ -95,7 +91,7 @@
         <div class="index-area">
           <h2>Recently Played</h2>
           <a href="history.html" class="more">See your play history</a>
-          <hr/>
+          <hr>
           <div class="beatmap-list" id="beatmap-list-history">
           <!-- Beatmaps will be here -->
           </div>
@@ -103,7 +99,7 @@
         <div class="index-area">
           <h2>Favorited Beatmaps</h2>
           <a href="liked.html" class="more">See all favorited Beatmaps</a>
-          <hr/>
+          <hr>
           <div class="beatmap-list" id="beatmap-list-liked">
           <!-- Beatmaps will be here -->
           </div>
@@ -111,7 +107,7 @@
         <div class="index-area">
           <h2>Latest Beatmaps</h2>
           <a href="new.html" class="more">See all latest Beatmaps</a>
-          <hr/>
+          <hr>
           <div class="beatmap-list" id="beatmap-list-new">
           <!-- Beatmaps will be here -->
           </div>
@@ -119,7 +115,7 @@
         <div class="index-area">
           <a onclick="genRandomList()" class="more" style="cursor:pointer;">Get new random Beatmaps</a>
           <h2>Random Beatmaps<h2>
-          <hr/>
+          <hr>
           <div class="beatmap-list" id="beatmap-list-random">
           <!-- to be filled in script -->
           </div>

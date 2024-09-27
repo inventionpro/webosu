@@ -1,7 +1,7 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Home</title>
+  <head>
+    <title>Home - WebOsu!</title>
     <meta charset="UTF-8">
     <link rel=”canonical” href=”https://webosu.online/”/>
     <meta name="description" content="webosu! is a web port of osu! that can run on almost any PC, with features like usernames and a live scoreboard">
@@ -17,189 +17,188 @@
     <script src="js/settings.js"></script>
     <script src="js/jsloader.js"></script>
     <script src="js\lib\localforage.min.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <!--Game Area-->
-    <div class="game-area" id="game-area" hidden>
-    </div>
+    <div class="game-area" id="game-area" hidden></div>
     <div class="pause-menu" id="pause-menu" hidden>
-        <div class="paused-title">Paused</div>
-        <div class="button-list">
-            <div class="pausebutton continue" id="pausebtn-continue">
-                <div class="inner">Continue</div>
-            </div>
-            <div class="pausebutton retry" id="pausebtn-retry">
-                <div class="inner">Retry</div>
-            </div>
-            <div class="pausebutton quit" id="pausebtn-quit">
-                <div class="inner">Quit</div>
-            </div>
+      <div class="paused-title">Paused</div>
+      <div class="button-list">
+        <div class="pausebutton continue" id="pausebtn-continue">
+          <div class="inner">Continue</div>
         </div>
+        <div class="pausebutton retry" id="pausebtn-retry">
+          <div class="inner">Retry</div>
+        </div>
+        <div class="pausebutton quit" id="pausebtn-quit">
+          <div class="inner">Quit</div>
+        </div>
+      </div>
     </div>
     <!--Nav Bar-->
     <nav id="main-nav">
-        <div class="nav-link">
-            <a href="index.html" class="brand">webosu!</a>
-            <a href="new.html" class="pseudo button">New</a>
-            <a href="hot.html" class="pseudo button">Popular</a>
-            <a href="browse.html" class="pseudo button">Browse</a>
-        </div>
-        <div class="nav-search">
-            <form action="search.html">
-                <div container id="searchbar" class="searchbar">
-                    <input type="text" name="q" placeholder="Seach for beatmap or enter a Set ID" />
-                </div>
-            </form>
-        </div>
-        <div class="nav-tool">
-            <a href="liked.html" class="pseudo button">Favorites</a>
-            <a href="settings.html" class="pseudo button">Settings</a>
-            <input type="username" id="userreg" placeholder="Type your name" />
-        </div>
+      <div class="nav-link">
+        <a href="index.html" class="brand">webosu!</a>
+        <a href="new.html" class="pseudo button">New</a>
+        <a href="hot.html" class="pseudo button">Popular</a>
+        <a href="browse.html" class="pseudo button">Browse</a>
+      </div>
+      <div class="nav-search">
+        <form action="search.html">
+          <div container id="searchbar" class="searchbar">
+            <input type="text" name="q" placeholder="Seach for beatmap or enter a Set ID" />
+          </div>
+        </form>
+      </div>
+      <div class="nav-tool">
+        <a href="liked.html" class="pseudo button">Favorites</a>
+        <a href="settings.html" class="pseudo button">Settings</a>
+        <input type="username" id="userreg" placeholder="Type your name" />
+      </div>
     </nav>
     <div class="main-page" id="main-page">
-        <div class="main-content">
-                <div class="beatmap-list" id="beatmap-list">
-                    <!-- to be filled in script -->
-                    <h1 id="hint">webosu!Preview loading...</h1>
-                </div>
-                <div class="text">Previews work best on Chrome and Firefox!</div>
-                <div class="text">Join the <a href="https://discord.gg/v7wBtSdYzx">Discord server</a>!</div>
-                <div class="text">Beatmap Mirror <a href="https://catboy.best/">Mino</a></div>
-                <div class="text">Source code: <a href="https://github.com/BlaNKtext/webosu">Github</a></div>
-            </div>
-            <!-- <div class="side-panel">
-                to be activated in script
-            </div> -->
-            <!--Loader progress-->
-            <div class="statuslines" id="statuslines">
-                <div class="progress" id="script-progress">
-                    Scripts
-                    <div class="lds-dual-ring"></div>
-                </div>
-                <div class="progress" id="skin-progress">
-                    Skin
-                    <div class="lds-dual-ring"></div>
-                </div>
-                <div class="progress" id="sound-progress">
-                    Hitsounds
-                    <div class="lds-dual-ring"></div>
-                </div>
-            </div>
-        </div>  
-        <script>
-            let cururl = new URL(window.location.href);
-            let sid = cururl.searchParams.get("sid");
-            let bid = cururl.searchParams.get("bid");
+      <div class="main-content">
+          <div class="beatmap-list" id="beatmap-list">
+            <!-- to be filled in script -->
+            <h1 id="hint">webosu!Preview loading...</h1>
+          </div>
+          <div class="text">Previews work best on Chrome and Firefox!</div>
+          <div class="text">Join the <a href="https://discord.gg/v7wBtSdYzx">Discord server</a>!</div>
+          <div class="text">Beatmap Mirror <a href="https://catboy.best/">Mino</a></div>
+          <div class="text">Source code: <a href="https://github.com/BlaNKtext/webosu">Github</a></div>
+        </div>
+        <!-- <div class="side-panel">
+          to be activated in script
+        </div> -->
+        <!--Loader progress-->
+        <div class="statuslines" id="statuslines">
+          <div class="progress" id="script-progress">
+            Scripts
+            <div class="lds-dual-ring"></div>
+          </div>
+          <div class="progress" id="skin-progress">
+            Skin
+            <div class="lds-dual-ring"></div>
+          </div>
+          <div class="progress" id="sound-progress">
+            Hitsounds
+            <div class="lds-dual-ring"></div>
+          </div>
+        </div>
+      </div>  
+      <script>
+        let cururl = new URL(window.location.href);
+        let sid = cururl.searchParams.get("sid");
+        let bid = cururl.searchParams.get("bid");
 
-            // Version look up
-            let version = null;
-            const fetchVersion = async () => {
-            let apiUrl = `https://catboy.best/api/v2/b/${bid}`;
-                try {
-            let response = await fetch(apiUrl);
-                    if (!response.ok) {
-                throw new Error('Network response was not ok');
-                    }
-            let data = await response.json();
-                console.log(data);
-            for (let i = 0; i < data.data.bid_data.length; ++i) {
-            if (data.data.bid_data[i].bid == bid) {
-                version = data.data.bid_data[i].version;
-                break;
-                }
-            }
-                } catch (error) {
-        console.error('There was a problem with the fetch operation:', error);
-                }
-            };
-            fetchVersion();
-            let url = `https://catboy.best/api/v2/s/${sid}`;
-
-            // Create download progress bar
-            let container = document.createElement("div");
-            let title = document.createElement("div");
-            let bar = document.createElement("progress");
-            container.className = "download-progress";
-            title.className = "title";
-            title.innerText = sid;
-            container.appendChild(title);
-            container.appendChild(bar);
-            let statuslines = document.getElementById("statuslines");
-            statuslines.insertBefore(container, statuslines.children[3]);
-            bar.max = 1;
-            bar.value = 0;
-            // Function to start game when download is complete
-            function start() {
-        function f() {
-            window.game.autoplay = true;
-            launchGame(window.oszblob, bid, version);
-            function wtf() {
-                if (window.playback)
-                    window.playback.pause = function() {};
-                else
-                    window.setTimeout(wtf, 50);
-            }
-            wtf();
-            window.removeEventListener("click", f);
-            document.getElementById("hint").innerText = "If the beatmap preview does not start, there may be an issue with the beatmap package or data.";
-        }
-        window.addEventListener("click", f);
-        document.getElementById("hint").innerText = "Click anywhere to start!";
-            }
-            // Fetch the beatmap and handle progress
-            fetch(url)
-        .then(response => {
+        // Version look up
+        let version = null;
+        const fetchVersion = async () => {
+        let apiUrl = `https://catboy.best/api/v2/b/${bid}`;
+          try {
+        let response = await fetch(apiUrl);
             if (!response.ok) {
-                throw new Error('Network response was not ok');
+          throw new Error('Network response was not ok');
             }
-        // Create a readable stream to handle progress
-        const contentLength = response.headers.get('Content-Length');
-        const total = contentLength ? parseInt(contentLength, 10) : 0;
-        let loaded = 0;
-        const reader = response.body.getReader();
-        const stream = new ReadableStream({
-            start(controller) {
-                reader.read().then(function processText({ done, value }) {
-                    if (done) {
-                        controller.close();
-                        return;
-                    }
-                    loaded += value.length;
-                    bar.value = loaded / total;
-                    controller.enqueue(value);
-                    return reader.read().then(processText);
-                }).catch(err => {
-                    console.error('Stream reading error:', err);
-                    controller.error(err);
-                });
+        let data = await response.json();
+          console.log(data);
+        for (let i = 0; i < data.data.bid_data.length; ++i) {
+        if (data.data.bid_data[i].bid == bid) {
+          version = data.data.bid_data[i].version;
+          break;
+          }
+        }
+          } catch (error) {
+      console.error('There was a problem with the fetch operation:', error);
+          }
+        };
+        fetchVersion();
+        let url = `https://catboy.best/api/v2/s/${sid}`;
+
+        // Create download progress bar
+        let container = document.createElement("div");
+        let title = document.createElement("div");
+        let bar = document.createElement("progress");
+        container.className = "download-progress";
+        title.className = "title";
+        title.innerText = sid;
+        container.appendChild(title);
+        container.appendChild(bar);
+        let statuslines = document.getElementById("statuslines");
+        statuslines.insertBefore(container, statuslines.children[3]);
+        bar.max = 1;
+        bar.value = 0;
+        // Function to start game when download is complete
+        function start() {
+      function f() {
+        window.game.autoplay = true;
+        launchGame(window.oszblob, bid, version);
+        function wtf() {
+          if (window.playback)
+            window.playback.pause = function() {};
+          else
+            window.setTimeout(wtf, 50);
+        }
+        wtf();
+        window.removeEventListener("click", f);
+        document.getElementById("hint").innerText = "If the beatmap preview does not start, there may be an issue with the beatmap package or data.";
+      }
+      window.addEventListener("click", f);
+      document.getElementById("hint").innerText = "Click anywhere to start!";
+        }
+        // Fetch the beatmap and handle progress
+        fetch(url)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+      // Create a readable stream to handle progress
+      const contentLength = response.headers.get('Content-Length');
+      const total = contentLength ? parseInt(contentLength, 10) : 0;
+      let loaded = 0;
+      const reader = response.body.getReader();
+      const stream = new ReadableStream({
+        start(controller) {
+          reader.read().then(function processText({ done, value }) {
+            if (done) {
+              controller.close();
+              return;
             }
-        });
-            return new Response(stream);
-            })
-        .then(response => response.blob())
-        .then(blob => {
-            window.oszblob = blob;
-            bar.className = "finished";
-            function checkToStart() {
-                if (!window.scriptReady || !window.soundReady || !window.skinReady) {
-                    window.setTimeout(checkToStart, 50);
-                    return;
-                }
-                start();
-            }
-            checkToStart();
+            loaded += value.length;
+            bar.value = loaded / total;
+            controller.enqueue(value);
+            return reader.read().then(processText);
+          }).catch(err => {
+            console.error('Stream reading error:', err);
+            controller.error(err);
+          });
+        }
+      });
+        return new Response(stream);
         })
-        .catch(error => {
-            console.error("Download failed:", error);
-            alert("Beatmap download failed.");
-            log_to_server("fail " + sid);
-        });
-            // Ensure the callback is executed only once
-            if (window.beatmaplistLoadedCallback) {
-        window.beatmaplistLoadedCallback();
-        window.beatmaplistLoadedCallback = null;
+      .then(response => response.blob())
+      .then(blob => {
+        window.oszblob = blob;
+        bar.className = "finished";
+        function checkToStart() {
+          if (!window.scriptReady || !window.soundReady || !window.skinReady) {
+            window.setTimeout(checkToStart, 50);
+            return;
+          }
+          start();
+        }
+        checkToStart();
+      })
+      .catch(error => {
+        console.error("Download failed:", error);
+        alert("Beatmap download failed.");
+        log_to_server("fail " + sid);
+      });
+        // Ensure the callback is executed only once
+        if (window.beatmaplistLoadedCallback) {
+      window.beatmaplistLoadedCallback();
+      window.beatmaplistLoadedCallback = null;
     }
-        </script>
-    </body>
+    </script>
+  </body>
 </html>

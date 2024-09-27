@@ -6,6 +6,7 @@
   --bg: #282c34;
 
   --nav: #191919;
+  --nav-button-hover: #515151;
 }
 
 body {
@@ -98,20 +99,12 @@ nav .brand {
   margin-right: 1.5em;
 }
 
-.nav-tool {
-  display: flex;
-}
-
 @media screen and (max-device-width: 900px) {
   nav {
     flex-wrap: wrap;
     height: auto;
     padding-right: 9px;
     justify-content: center;
-  }
-
-  .nav-tool {
-    display: none;
   }
 
   .nav-link {
@@ -136,16 +129,18 @@ nav .brand {
 }
 
 nav .pseudo.button {
-  margin-top: 0.7em;
-  height: 2.3em;
+  display: flex;
+  align-items: center;
+  height: 2.3rem;
   padding: 0 1em;
-  border-radius: 0px;
-  transition: 0s;
 }
 
-nav .pseudo.button.active, nav .pseudo.button:hover {
-  box-shadow: none;
-  border-bottom: 3px solid #fff;
+nav .pseudo.button:hover {
+  background: var(--nav-button-hover);
+}
+
+nav .pseudo.button.active {
+  border-bottom: 3px solid var(--text-0);
 }
 
 nav form {
