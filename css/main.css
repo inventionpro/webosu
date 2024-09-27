@@ -1,3 +1,4 @@
+/* Colors */
 :root {
   --text-0: #fff;
   --text-1: #d0d5df;
@@ -9,8 +10,11 @@
   --nav-button-hover: #515151;
   --nav-button-active: #cd1d48;
   --nav-button-hover-active: #ff5580;
+
+  --input: #242424;
 }
 
+/* Basic styling */
 body {
   color: var(--text-1);
   background: var(--bg);
@@ -19,28 +23,6 @@ body {
   font-weight: 400;
   font-family: "Comfortaa", sans-serif;
   font-optical-sizing: auto;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  top: 45px;
-  position: absolute;
-  background-color: #282c34;
-  min-width: 500px;
-  min-height: 500px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  padding: 15px 15px;
-  z-index: 1;
-  border-radius: 10px;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -67,6 +49,28 @@ canvas {
   display: block;
 }
 
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  top: 45px;
+  position: absolute;
+  background-color: #282c34;
+  min-width: 500px;
+  min-height: 500px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 15px 15px;
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 .game-area.showhwmousemedium {
   cursor: url("cursor.cur") 40 40, url("cursorsmall.cur") 30 30, crosshair !important;
 }
@@ -75,50 +79,20 @@ canvas {
   cursor: none !important;
 }
 
+/* Nav */
 nav {
   display: flex;
   white-space: nowrap;
   color: var(--text-0);
   background: var(--nav);
 }
-
 .nav-link {
   display: flex;
 }
-
 .nav-search {
   width: 100%;
   margin-left: 1.5em;
   margin-right: 1.5em;
-}
-
-@media screen and (max-device-width: 900px) {
-  nav {
-    flex-wrap: wrap;
-    height: auto;
-    padding-right: 9px;
-    justify-content: center;
-  }
-
-  .nav-link {
-    height: 2.6em;
-  }
-
-  .nav-search {
-    margin: 0;
-  }
-
-  .main-page {
-    margin-top: 84px !important;
-  }
-
-  .statuslines {
-    top: 84px !important;
-  }
-
-  .difficulty-box {
-    left: 40px !important;
-  }
 }
 
 nav .pseudo.button {
@@ -139,6 +113,33 @@ nav .pseudo.button.active:hover {
 
 nav form {
   position: relative;
+}
+
+@media screen and (max-device-width: 900px) {
+  nav {
+    flex-wrap: wrap;
+    height: auto;
+    padding-right: 9px;
+    justify-content: center;
+  }
+  .nav-link {
+    height: 2.6em;
+  }
+  .nav-search {
+    margin: 0;
+  }
+
+  .main-page {
+    margin-top: 84px !important;
+  }
+
+  .statuslines {
+    top: 84px !important;
+  }
+
+  .difficulty-box {
+    left: 40px !important;
+  }
 }
 
 /*fix placeholder color for chrome*/
@@ -279,22 +280,6 @@ thead {
   color: #999;
 }
 
-.footer {
-  margin-bottom: 8px;
-  margin-left: 8px;
-  margin-right: 8px;
-  border-radius: 4px 4px 4px 4px;
-  overflow-x: hidden;
-  padding: 1.5rem;
-  background: #22252c;
-  font-size: 15px;
-  text-align: center;
-}
-
-.footer-info {
-  margin: 8px;
-}
-
 .main-content {
   border-radius: 4px;
   margin: auto;
@@ -312,6 +297,8 @@ thead {
 .index-area {
   position: relative;
   margin-bottom: 1.5em;
+  width: 100vw;
+  max-width: 1225px;
 }
 
 .index-area .more {
@@ -837,8 +824,6 @@ h1, h2, h3 {
   top: 48px;
   background: rgba(0, 0, 0, 0.5);
   padding: 12px;
-  padding-right: 12px;
-  width: 152px;
   text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.7);
   border-radius: 0px 4px 4px 0px;
 }
@@ -891,7 +876,7 @@ progress.finished::-webkit-progress-value {
   margin-bottom: 20px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: left;
+  justify-content: center;
   margin-right: -17px;
   position: relative;
 }
@@ -1155,25 +1140,21 @@ progress.finished::-webkit-progress-value {
 }
 
 input {
-  background: #46406b;
-  color: rgb(255, 255, 255);
+  color: var(--text-0);
   border: none;
+  background: var(--input);
 }
-
 input:focus {
-  border-color: #fff;
+  border-color: var(--text-0);
 }
-
 input:focus {
-  outline: 0;
+  outline: none;
 }
-
 input[type="username"] {
   width: 145px;
   margin: 6px 2px;
   text-align: center;
 }
-
 input[type="checkbox"] {
   cursor: pointer;
   height: 20px;
@@ -1183,7 +1164,6 @@ input[type="checkbox"] {
   width: 40px;
   z-index: 2;
 }
-
 input[type="checkbox"] + span {
   background: rgba(85, 85, 85, 0);
   border-radius: 10px;
@@ -1195,7 +1175,6 @@ input[type="checkbox"] + span {
   width: 40px;
   transition: all 0.2s ease;
 }
-
 input[type="checkbox"] + span::before, input[type="checkbox"] + span::after {
   background: #eee;
   content: "";
@@ -1206,16 +1185,13 @@ input[type="checkbox"] + span::before, input[type="checkbox"] + span::after {
   border-radius: 50%;
   transition: all 0.2s ease;
 }
-
 input[type="checkbox"] + span::after {
   right: 22px;
   width: 16px;
 }
-
 input[type="checkbox"]:checked + span {
   background: #9d7dcc;
 }
-
 input[type="checkbox"]:checked + span::after {
   right: 2px;
   width: 16px;
@@ -1396,7 +1372,7 @@ input[type="file"] > label {
   border-radius: 1.3px;
 }
 
-/* -- Scrollbars -- */
+/* Scrollbars */
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
