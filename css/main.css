@@ -1367,7 +1367,7 @@ input[type="file"] > label {
   height: 10px;
 }
 ::-webkit-scrollbar-track, ::-webkit-scrollbar-corner {
-  background: var(--bg);
+  background: var(--nav);
 }
 ::-webkit-scrollbar-thumb {
   border-radius: 1rem;
