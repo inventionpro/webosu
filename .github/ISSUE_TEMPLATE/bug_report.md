@@ -1,9 +1,9 @@
 ---
 name: Bug report
-about: Make a report detailing a bug you'd like squashed.
-title: Oh no, something isn't working!!!
+about: Report a bug or issue
+title: [Bug] Something not working
 labels: bug
-assignees: BlaNKtext
+assignees: inventionpro
 
 ---
 

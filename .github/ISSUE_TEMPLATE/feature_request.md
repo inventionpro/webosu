@@ -1,9 +1,9 @@
 ---
 name: Feature request
 about: Suggest an idea for this project
-title: More
+title: [Feature] Thing i would like added
 labels: enhancement
-assignees: BlaNKtext
+assignees: inventionpro
 
 ---
 
