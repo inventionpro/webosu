@@ -1,25 +1,19 @@
-
-.comfortaa-font {
-  font-family: "Comfortaa", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 350;
-  font-style: normal;
-}
+@charset "UTF-8";
 
 @font-face {
-  font-family: 'Comfortaa';
+  font-family: "Comfortaa";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap.woff2') format('woff2');
+  src: url("comfortaa.ttf") format("ttf");
   unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
 }
 
 @font-face {
-  font-family: 'fontello';
+  font-family: "fontello";
   font-style: normal;
   font-weight: normal;
-  src: url('fontello.ttf') format('truetype');
+  src: url("fontello.ttf") format("truetype");
 }
 
 [class^="icon-"]:before,
@@ -31,7 +25,7 @@
   display: inline-block;
   text-decoration: inherit;
   width: 1em;
-  margin-right: .2em;
+  margin-right: 0.2em;
   text-align: center;
   /* opacity: .8; */
 
@@ -44,7 +38,7 @@
 
   /* Animation center compensation - margins should be symmetric */
   /* remove if not needed */
-  margin-left: .2em;
+  margin-left: 0.2em;
 
   /* you can be more comfortable with increased icons size */
   /* font-size: 120%; */
@@ -58,82 +52,82 @@
 }
 
 .icon-search:before {
-  content: '\e800';
+  content: "\e800";
 }
 
 /* '' */
 .icon-heart-empty:before {
-  content: '\e801';
+  content: "\e801";
 }
 
 /* '' */
 .icon-heart:before {
-  content: '\e802';
+  content: "\e802";
 }
 
 /* '' */
 .icon-cog:before {
-  content: '\e803';
+  content: "\e803";
 }
 
 /* '' */
 .icon-star:before {
-  content: '\e804';
+  content: "\e804";
 }
 
 /* '' */
 .icon-help-circled:before {
-  content: '\e805';
+  content: "\e805";
 }
 
 /* '' */
 .icon-globe:before {
-  content: '\e806';
+  content: "\e806";
 }
 
 /* '' */
 .icon-ok:before {
-  content: '\e807';
+  content: "\e807";
 }
 
 /* '' */
 .icon-download:before {
-  content: '\e808';
+  content: "\e808";
 }
 
 /* '' */
 .icon-upload:before {
-  content: '\e809';
+  content: "\e809";
 }
 
 /* '' */
 .icon-cancel:before {
-  content: '\e80a';
+  content: "\e80a";
 }
 
 /* '' */
 .icon-github-circled:before {
-  content: '\f09b';
+  content: "\f09b";
 }
 
 /* '' */
 .icon-download-cloud:before {
-  content: '\f0ed';
+  content: "\f0ed";
 }
 
 /* '' */
 .icon-help:before {
-  content: '\f128';
+  content: "\f128";
 }
 
 /* '' */
 .icon-play-circled:before {
-  content: '\f144';
+  content: "\f144";
 }
 
 /* '' */
 .icon-trash:before {
-  content: '\f1f8';
+  content: "\f1f8";
 }
 
 /* '' */
