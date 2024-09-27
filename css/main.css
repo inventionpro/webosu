@@ -7,6 +7,8 @@
 
   --nav: #191919;
   --nav-button-hover: #515151;
+  --nav-button-active: #cd1d48;
+  --nav-button-hover-active: #ff5580;
 }
 
 body {
@@ -80,15 +82,6 @@ nav {
   background: var(--nav);
 }
 
-nav .brand {
-  font-size: 1.1em;
-  line-height: 1em;
-  padding-left: 1em;
-  padding-right: 1em;
-  box-sizing: content-box;
-  margin-top: 0.515em;
-}
-
 .nav-link {
   display: flex;
 }
@@ -134,13 +127,14 @@ nav .pseudo.button {
   height: 2.3rem;
   padding: 0 1em;
 }
-
 nav .pseudo.button:hover {
   background: var(--nav-button-hover);
 }
-
 nav .pseudo.button.active {
-  border-bottom: 3px solid var(--text-0);
+  background: var(--nav-button-active);
+}
+nav .pseudo.button.active:hover {
+  background: var(--nav-button-hover-active);
 }
 
 nav form {
