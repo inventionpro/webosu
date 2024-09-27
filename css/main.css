@@ -170,17 +170,6 @@ form input {
   margin-top: 40px;
 }
 
-.announcement {
-  width: 100%;
-  border-radius: 4px;
-  background: #393b47;
-  padding-left: 6px;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
 .index-area table {
   width: 1250px;
   white-space: nowrap;
