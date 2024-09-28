@@ -168,6 +168,13 @@
       "spriteSourceSize": { "x": 0, "y": 0, "w": 500, "h": 40 },
       "sourceSize": { "w": 500, "h": 40 }
     },
+    "menu-cursor.png": {
+      "frame": { "x": 654, "y": 0, "w": 500, "h": 40 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 312, "h": 442 },
+      "sourceSize": { "w": 312, "h": 442 }
+    },
     "percent.png": {
       "frame": { "x": 1362, "y": 0, "w": 70, "h": 100 },
       "rotated": false,

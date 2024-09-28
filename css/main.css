@@ -334,12 +334,15 @@ thead {
 
 .pausebutton.continue {
   --color: #88b300;
+  --offset: 0ms;
 }
 .pausebutton.retry {
   --color: #eeaa00;
+  --offset: -7s;
 }
 .pausebutton.quit {
   --color: #aa1b27;
+  --offset: -15s;
 }
 
 @keyframes trianglesBackground {
@@ -347,7 +350,7 @@ thead {
     background-position: 0 0;
   }
   to {
-    background-position: 0 109%;
+    background-position: 0 200%;
   }
 }
 
@@ -364,7 +367,7 @@ thead {
   cursor: pointer;
   background: url('../img/triangles.svg'), var(--color);
   background-size: cover;
-  animation: trianglesBackground 20s linear infinite;
+  animation: trianglesBackground 20s linear infinite var(--offset);
 }
 
 .pausebutton:hover {
