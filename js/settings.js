@@ -14,7 +14,7 @@ function setOptionPanel() {
   let defaultsettings = {
     dim: 60,
     blur: 0,
-    cursorsize: 1.0,
+    cursorsize: 2.0,
     showhwmouse: false,
     snakein: true,
     snakeout: true,
@@ -49,7 +49,7 @@ function setOptionPanel() {
     autoplay: false,
 
     hideNumbers: false,
-    hideGreat: true,
+    hideGreat: false,
     hideFollowPoints: false,
     soundNames: undefined,
   };

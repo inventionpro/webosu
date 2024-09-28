@@ -15,7 +15,7 @@ require(["osu", "underscore", "sound", "playback"], function (Osu, _, sound, Pla
     // display
     backgroundDimRate: 0.7,
     backgroundBlurRate: 0.0,
-    cursorSize: 1.0,
+    cursorSize: 2.0,
     showhwmouse: false,
     snakein: true,
     snakeout: true,
@@ -45,7 +45,7 @@ require(["osu", "underscore", "sound", "playback"], function (Osu, _, sound, Pla
 
     // skin mods
     hideNumbers: false,
-    hideGreat: true,
+    hideGreat: false,
     hideFollowPoints: false,
 
     // cursor info
