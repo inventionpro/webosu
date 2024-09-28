@@ -367,7 +367,7 @@ thead {
   cursor: pointer;
   background: url('../img/triangles.svg'), var(--color);
   background-size: cover;
-  animation: trianglesBackground 20s linear infinite var(--offset);
+  animation: trianglesBackground 40s linear infinite var(--offset);
 }
 
 .pausebutton:hover {
