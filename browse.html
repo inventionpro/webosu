@@ -98,8 +98,9 @@
       function add() {
         let q = encodeURIComponent(document.getElementById('search').value);
         let type = document.getElementById('selecttype').value;
-        search.set('q', q)
-        search.set('type', type)
+        search.set('q', q);
+        search.set('type', type);
+        window.history.replaceState({}, 'Browse - WebOsu!', location.href.split('?')[0]+'?'+search.toString());
         addBeatmapList(`https://catboy.best/api/v2/search?q=${q}&p=${p}&mode=0&sort=${type}`);
       }
       function clear() {
@@ -125,12 +126,14 @@
         }
       }
       add();
-      if (search.get("q")) {
-        document.getElementById("search").value = decodeURIComponent(search.get("q"));
-      }
-      if (search.get("type")) {
-        document.getElementById("selecttype").value = search.get("type");
-      }
+      window.addEventListener('DOMContentLoaded', function(){
+        if (search.get("q")) {
+          document.getElementById("search").value = decodeURIComponent(search.get("q"));
+        }
+        if (search.get("type")) {
+          document.getElementById("selecttype").value = search.get("type");
+        }
+      })
     </script>
   </body>
 </html>
