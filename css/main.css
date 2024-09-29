@@ -86,14 +86,6 @@ nav {
   color: var(--text-0);
   background: var(--nav);
 }
-.nav-link {
-  display: flex;
-}
-.nav-search {
-  width: 100%;
-  margin-left: 1.5em;
-  margin-right: 1.5em;
-}
 
 nav .pseudo.button {
   display: flex;
@@ -167,6 +159,7 @@ form input {
 }
 
 .main-page {
+  overflow: hidden;
   margin-top: 40px;
 }
 
@@ -350,7 +343,7 @@ thead {
     background-position: 0 0;
   }
   to {
-    background-position: 0 200%;
+    background-position: 0 109%;
   }
 }
 
@@ -367,7 +360,7 @@ thead {
   cursor: pointer;
   background: url('../img/triangles.svg'), var(--color);
   background-size: cover;
-  animation: trianglesBackground 40s linear infinite var(--offset);
+  animation: trianglesBackground 20s linear infinite var(--offset);
 }
 
 .pausebutton:hover {
@@ -841,10 +834,11 @@ h1, h2, h3 {
 }
 
 progress {
+  width: 100%;
+  height: 3px;
   background: #333;
   background-color: #333;
   border-style: none;
-  height: 3px;
 }
 
 progress::-webkit-progress-bar {
@@ -873,12 +867,12 @@ progress.finished::-webkit-progress-value {
 
 /* Beatmap Box/List */
 .beatmap-list {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  width: 100vw;
+  width: 100dvw;
+  margin: 20px 0px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-right: -17px;
   position: relative;
 }
 

@@ -33,37 +33,36 @@
     </div>
     <!--Nav Bar-->
     <nav id="main-nav">
-      <div class="nav-link"></div>
+      <div class="nav-link">
         <a href="settings.html" class="pseudo button"><img src="img/settings.png" width="25" height="25"></a>
         <a href="index.html" class="pseudo button"><img src="img/home.png" width="25" height="25"></a>
-        <a href="new.html" class="pseudo button">New</a>
-        <a href="hot.html" class="pseudo button">Popular</a>
-        <a href="browse.html" class="pseudo button active">Browse</a>
+        <span style="display:block;flex:1;"></span>
+        <a href="browse.html" class="pseudo button active"><img src="img/beatmap.png" width="25" height="25"></a>
         <a href="liked.html" class="pseudo button">Favorites</a>
-      </div>
-      <div class="nav-search">
-        <form action="search.html">
-          <container id="searchbar" class="searchbar">
-            <input type="text" name="q" placeholder="Seach for beatmap or enter a Set ID">
-          </container>
-        </form>
-      </div>
-      <div class="nav-link">
         <input type="username" id="userreg" placeholder="Type your name">
       </div>
     </nav>
     <div class="main-page" id="main-page">
-      <div class="main-content">
-        <div class="beatmap-list" id="beatmap-list">
-          <!-- to be filled in script -->
-        </div>
-        <div
-          class="button"
-          style="width: 100%; margin-bottom: 10px"
-          id="btnmore">Load More
-        </div>
+      <div style="display:flex;margin-top:20px;flex-direction:column;align-items:center;">
+        <span style="display:flex;">
+          <img src="img/beatmap.png" width="25" height="25">
+          <h2>Browse</h2>
+        </span>
+        <span>
+          <span>Sort:</span>
+          <select id="selecttype">
+            <option value="id:desc">New</option>
+            <option value="id:asc">Old</option>
+            <option value="play_count:desc">Playcount (desc)</option>
+            <option value="play_count:asc">Playcount (asc)</option>
+          </select>
+        </span>
+        <input id="search" style="width:50vw" placeholder="Seach for beatmap or enter a Set ID">
       </div>
-      <!-- <div class="side-panel">to be activated in script</div> -->
+      <div class="beatmap-list" id="beatmap-list"></div>
+      <div style="width:fit-content;margin-inline:auto;margin:0px auto 20px;">
+        <button style="width:75vw" id="btnmore">Load More</button>
+      </div>
       <div class="statuslines" id="statuslines">
         <div class="progress" id="script-progress">
           Scripts
@@ -89,17 +88,50 @@
            saveUser();
         }
       });
-   //Store username in localstorage
-      function saveUser( name ) {
+      // Store username in localstorage
+      function saveUser(name) {
         const player = document.getElementById('userreg').value;
         window.localStorage.setItem("username", player);
         document.cookie = 'username=' + player;
       }
-      addBeatmapList("https://catboy.best/api/v2/search?q=&mode=0&sort=id:asc");
-      let p = "1";
-      document.getElementById("btnmore").onclick = function () {
-        addBeatmapList(`https://catboy.best/api/v2/search?q=&p=${p}&mode=0&sort=id:asc`);
-      p++
+      // Beatmaps
+      let search = new URLSearchParams(window.location.search);
+      let p = 0;
+      function add() {
+        let q = encodeURIComponent(document.getElementById('search').value);
+        let type = document.getElementById('selecttype').value;
+        search.set('q', q)
+        search.set('type', type)
+        addBeatmapList(`https://catboy.best/api/v2/search?q=${q}&p=${p}&mode=0&sort=${type}`);
+      }
+      function clear() {
+        p = 1;
+        document.getElementById("beatmap-list").innerHTML = '';
+      }
+      document.getElementById("btnmore").onclick = function() {
+        p++;
+        add();
+      }
+      document.getElementById("selecttype").onchange = function() {
+        clear();
+        add();
+      }
+      document.getElementById("search").onchange = function() {
+        clear();
+        let val = document.getElementById("search");
+        // Checks for SID
+        if (val == parseInt(val, 10)) {
+          addBeatmapSid(val);
+        } else {
+          add();
+        }
+      }
+      add();
+      if (search.get("q")) {
+        document.getElementById("search").value = decodeURIComponent(search.get("q"));
+      }
+      if (search.get("type")) {
+        document.getElementById("selecttype").value = search.get("type");
       }
     </script>
   </body>

@@ -11,24 +11,12 @@
   </head>
   <!--Nav Bar-->
   <nav id="main-nav">
-    <div class="nav-link"></div>
-      <a href="settings.html" class="pseudo button active"><img src="img/settings.png" width="25" height="25"></a>
-      <a href="index.html" class="pseudo button"><img src="img/home.png" width="25" height="25"></a>
-      <a href="new.html" class="pseudo button">New</a>
-      <a href="hot.html" class="pseudo button">Popular</a>
-      <a href="browse.html" class="pseudo button">Browse</a>
-      <a href="liked.html" class="pseudo button">Favorites</a>
-    </div>
-    <div class="nav-search">
-      <form action="search.html">
-        <container id="searchbar" class="searchbar">
-          <input type="text" name="q" placeholder="Seach for beatmap or enter a Set ID">
-        </container>
-      </form>
-    </div>
-    <div class="nav-link">
-      <input type="username" id="userreg" placeholder="Type your name">
-    </div>
+    <a href="settings.html" class="pseudo button"><img src="img/settings.png" width="25" height="25"></a>
+    <a href="index.html" class="pseudo button"><img src="img/home.png" width="25" height="25"></a>
+    <span style="display:block;flex:1;"></span>
+    <a href="browse.html" class="pseudo button active"><img src="img/beatmap.png" width="25" height="25"></a>
+    <a href="liked.html" class="pseudo button">Favorites</a>
+    <input type="username" id="userreg" placeholder="Type your name">
   </nav>
   <!--Main Page-->
   <div class="main-page" id="main-page">
@@ -88,7 +76,7 @@
                 class="slider"
                 type="range"
                 min="0.5"
-                max="2.0"
+                max="4.0"
                 step="0.01"
                 value="0.5"
               >
