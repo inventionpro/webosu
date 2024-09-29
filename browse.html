@@ -117,7 +117,7 @@
       }
       document.getElementById("search").onchange = function() {
         clear();
-        let val = document.getElementById("search");
+        let val = document.getElementById("search").value;
         // Checks for SID
         if (val == parseInt(val, 10)) {
           addBeatmapSid(val);
