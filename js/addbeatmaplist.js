@@ -262,7 +262,7 @@ var NSaddBeatmapList = {
     let pBeatmapBPM = document.createElement("div");
     pBeatmapBPM.className = "beatmapbpm";
     box.appendChild(pBeatmapBPM);
-    pBeatmapBPM.innerText = Math.round(bpm) + " ♪bpm";
+    pBeatmapBPM.innerText = Math.round(bpm) + " bpm";
     let pBeatmapLength = document.createElement("div");
     pBeatmapLength.className = "beatmaplength";
     box.appendChild(pBeatmapLength);
