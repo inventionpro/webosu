@@ -85,7 +85,7 @@
       "sourceSize": { "w": 133, "h": 50 }
     },
     "barend.png": {
-      "frame": { "x": 1, "y": 1892, "w": 25, "h": 50 },
+      "frame": { "x": 966, "y": 925, "w": 25, "h": 50 },
       "rotated": true,
       "trimmed": false,
       "spriteSourceSize": { "x": 0, "y": 0, "w": 25, "h": 50 },
@@ -127,11 +127,11 @@
       "sourceSize": { "w": 60, "h": 30 }
     },
     "followpoint.png": {
-      "frame": { "x": 1188, "y": 1906, "w": 18, "h": 30 },
+      "frame": { "x": 1, "y": 1892, "w": 29, "h": 48 },
       "rotated": true,
       "trimmed": false,
-      "spriteSourceSize": { "x": 0, "y": 0, "w": 18, "h": 30 },
-      "sourceSize": { "w": 18, "h": 30 }
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 29, "h": 48 },
+      "sourceSize": { "w": 29, "h": 48 }
     },
     "hitburst.png": {
       "frame": { "x": 875, "y": 1296, "w": 256, "h": 256 },
@@ -351,6 +351,6 @@
     "format": "RGBA8888",
     "size": { "w": 1219, "h": 1927 },
     "scale": "1",
-    "smartupdate": "$TexturePacker:SmartUpdate:3031129c89737facddadb54b81ff4489:c8f4087640377a8000ad1e76bc89f46d:1eabdf11f75e3a4fe3147baf7b5be24b$"
+    "smartupdate": "$TexturePacker:SmartUpdate:f201f39db51d4ef53e230e8e7f80c63f:6635f3274e7b782aa41c7e0e9ce62b2c:1eabdf11f75e3a4fe3147baf7b5be24b$"
   }
 }
