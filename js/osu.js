@@ -18,8 +18,10 @@ define(["underscore", "osu-audio", "curves/LinearBezier", "curves/CircumscribedC
     this.decode = _.bind(function decode() {
       // Decodes a .osu file
       var lines = self.track.replace("\r", "").split("\n");
-      if (lines[0] != "osu file format v14") {
-        // TODO: Do we care?
+      if (lines[0] == "osu file format v128") {
+        window.alert('Playing a lazer beatmap, some stuff may break')
+      } else if (lines[0] != "osu file format v14") {
+        window.alert('Playing a outdated beatmap, some stuff may break')
       }
       var section = null;
       var combo = 0,
