@@ -14,6 +14,11 @@
     <script src="js/addbeatmaplist.js"></script>
     <script src="js/settings.js"></script>
     <script src="js/jsloader.js"></script>
+    <style>
+      .sp-flex, .sp-flex > span {
+        display: flex;
+      }
+    </style>
   </head>
   <body>
     <div class="game-area" id="game-area" hidden></div>
@@ -54,6 +59,44 @@
             <option value="play_count:desc">Playcount (desc)</option>
             <option value="play_count:asc">Playcount (asc)</option>
           </select>
+        </span>
+        <span>Type:</span>
+        <span class="sp-flex">
+          <span>
+            <input type="checkbox" id="type-graveyard">
+            <span></span>
+            <label for="type-graveyard">Graveyard</label>
+          </span>
+          <span>
+            <input type="checkbox" id="type-wip">
+            <span></span>
+            <label for="type-wip">WIP</label>
+          </span>
+          <span>
+            <input type="checkbox" id="type-pending">
+            <span></span>
+            <label for="type-pending">Pending</label>
+          </span>
+          <span>
+            <input type="checkbox" id="type-ranked" checked>
+            <span></span>
+            <label for="type-ranked">Ranked</label>
+          </span>
+          <span>
+            <input type="checkbox" id="type-approved" checked>
+            <span></span>
+            <label for="type-approved">Approved</label>
+          </span>
+          <span>
+            <input type="checkbox" id="type-qualified" checked>
+            <span></span>
+            <label for="type-qualified">Qualified</label>
+          </span>
+          <span>
+            <input type="checkbox" id="type-loved" checked>
+            <span></span>
+            <label for="type-loved">Loved</label>
+          </span>
         </span>
         <input id="search" style="width:50vw" placeholder="Seach for beatmap or enter a Set ID">
       </div>
@@ -101,7 +144,10 @@
         search.set('q', q);
         search.set('type', type);
         window.history.replaceState({}, 'Browse - WebOsu!', location.href.split('?')[0]+'?'+search.toString());
-        addBeatmapList(`https://catboy.best/api/v2/search?q=${q}&p=${p}&mode=0&sort=${type}`);
+        function typed(id, num) {
+          return document.getElementById(id).checked ? `&status=${num}` : '';
+        }
+        addBeatmapList(`https://catboy.best/api/v2/search?q=${q}&p=${p}&mode=0&sort=${type}${typed('type-graveyard', -2)}${typed('type-wip', -1)}${typed('type-pending', 0)}${typed('type-ranked', 1)}${typed('type-approved', 2)}${typed('type-qualified', 3)}${typed('type-loved', 4)}`);
       }
       function clear() {
         p = 1;
@@ -125,6 +171,12 @@
           add();
         }
       }
+      Array.from(document.querySelectorAll("#type-graveyard, #type-wip, #type-pending, #type-ranked, #type-approved, #type-qualified, #type-loved")).forEach(elem => {
+        elem.onchange = function() {
+          clear();
+          add();
+        }
+      })
       add();
       window.addEventListener('DOMContentLoaded', function(){
         if (search.get("q")) {
