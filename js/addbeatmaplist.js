@@ -295,11 +295,6 @@ async function addBeatmapList(listurl, list) {
   // request beatmap pack list
   const data = await request.json();
 
-  if (typeof data.endid != "undefined") {
-    window.list_endid = data.endid;
-  } else {
-    window.list_endid = 0;
-  }
   let box = [];
 
   // add widget to webpage as soon as list is fetched
@@ -318,7 +313,7 @@ async function addBeatmapList(listurl, list) {
     };
   }
   if (window.beatmaplistLoadedCallback) {
-    window.beatmaplistLoadedCallback();
+    window.beatmaplistLoadedCallback(data);
     window.beatmaplistLoadedCallback = null;
     // to make sure it's called only once
   }

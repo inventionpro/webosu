@@ -36,13 +36,17 @@ define([], function () {
          fontSize: 14,
          fill: ["#ffffff"],
       });
-      this.sourcetext = new PIXI.Text(
-         "Source: " + (track.metadata.Source || "-"),
-         { fontFamily: "Comfortaa", fontSize: 14, fill: ["#ffffff"] }
+      this.sourcetext = new PIXI.Text("Source: " + (track.metadata.Source || "-"), {
+         fontFamily: "Comfortaa",
+         fontSize: 14,
+         fill: ["#ffffff"]
+      }
       );
-      this.mappertext = new PIXI.Text(
-         "Mapper: " + (track.metadata.Creator || "-"),
-         { fontFamily: "Comfortaa", fontSize: 14, fill: ["#ffffff"] }
+      this.mappertext = new PIXI.Text("Mapper: " + (track.metadata.Creator || "-"), {
+         fontFamily: "Comfortaa",
+         fontSize: 14,
+         fill: ["#ffffff"]
+      }
       );
       this.titletext.anchor.set(0.5);
       this.artisttext.anchor.set(0.5);
