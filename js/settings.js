@@ -354,7 +354,7 @@ function setOptionPanel() {
   document.getElementById("import-btn").onclick = function() {
     document.getElementById('file-import').click();
   };
-  document.getElementById("file-import").onclick = function(event) {
+  document.getElementById("file-import").onchange = function(event) {
     let file = event.target.files[0];
     event.target.value = '';
     if (!file) return;
