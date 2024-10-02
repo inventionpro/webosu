@@ -362,7 +362,7 @@ function setOptionPanel() {
     reader.onload = (evt) => {
       try {
         let data = JSON.parse(evt.target.result);
-        Object.assign(gamesettings, data);
+        Object.keys(data).forEach(k=>gamesettings[k]=data[k])
         gamesettings.loadToGame();
         saveToLocal();
       } catch (err) {
