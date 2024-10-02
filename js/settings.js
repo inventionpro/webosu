@@ -51,7 +51,7 @@ function setOptionPanel() {
     hideNumbers: false,
     hideGreat: false,
     hideFollowPoints: false,
-    soundNames: undefined,
+    soundNames: undefined
   };
   window.gamesettings = {};
   Object.assign(gamesettings, defaultsettings);
@@ -334,11 +334,45 @@ function setOptionPanel() {
   bindcheck("hidegreat-check", "hideGreat");
   bindcheck("hidefollowpoints-check", "hideFollowPoints");
 
-  document.getElementById("restoredefault-btn").onclick = function () {
+  document.getElementById("restoredefault-btn").onclick = function() {
     Object.assign(gamesettings, defaultsettings);
     for (let i = 0; i < gamesettings.restoreCallbacks.length; ++i) gamesettings.restoreCallbacks[i]();
     gamesettings.loadToGame();
     saveToLocal();
+  };
+  document.getElementById("export-btn").onclick = function() {
+    let mod = {};
+    Object.keys(gamesettings).forEach(k=>{if(!['object','function'].includes(typeof gamesettings[k]))mod[k]=gamesettings[k];});
+    let element = document.createElement('a');
+    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(JSON.stringify(mod, null, 2)));
+    element.setAttribute('download', 'webosu-settings.json');
+    element.style.display = 'none';
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
+  };
+  document.getElementById("import-btn").onclick = function() {
+    document.getElementById('file-import').click();
+  };
+  document.getElementById("file-import").onclick = function(event) {
+    let file = event.target.files[0];
+    event.target.value = '';
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = (evt) => {
+      try {
+        let data = JSON.parse(evt.target.result);
+        Object.assign(gamesettings, data);
+        gamesettings.loadToGame();
+        saveToLocal();
+      } catch (err) {
+        alert('Could not parse file')
+      }
+    };
+    reader.onerror = () => {
+      alert('Could not load file')
+    };
+    reader.readAsText(file);
   };
 }
 
