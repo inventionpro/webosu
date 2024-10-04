@@ -55,7 +55,7 @@ define([], function () {
       this.avgmarker = new PIXI.Sprite(Skin["arrow.png"]);
       this.avgmarker.scale.set(0.08);
       this.avgmarker.anchor.set(0.5);
-      this.avgmarker.x = -8;
+      this.avgmarker.x = -12;
       this.avgmarker.y = 0;
       this.addChild(this.avgmarker);
 

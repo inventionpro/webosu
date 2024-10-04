@@ -29,6 +29,18 @@ define([
     return a > 1 ? 2 - a : a;
   }
 
+  function getDirection(dx, dy, dx1, dy1) {
+    let deltaX = dx1 - dx;
+    let deltaY = dy1 - dy;
+    let angleRad = Math.atan2(deltaY, deltaX);
+    let angleDeg = angleRad * (180 / Math.PI);
+    let adjustedAngle = angleDeg - 90;
+    if (adjustedAngle < -180) {
+      adjustedAngle += 360;
+    }
+    return adjustedAngle*-1;
+  }
+
   function Playback(game, osu, track) {
     var self = this;
     window.playback = this;
@@ -1144,6 +1156,7 @@ define([
           // slider ball immediately emerges
           hit.ball.visible = true;
           hit.ball.alpha = 1;
+          hit.ball.rotation = getDirection(dx, dy, dx1, dy1);
           // follow circie immediately emerges and gradually enlarges
           hit.follow.visible = true;
           if (this.game.down && isfollowing)
