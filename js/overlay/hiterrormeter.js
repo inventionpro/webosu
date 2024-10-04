@@ -24,7 +24,7 @@ define([], function () {
          piece.height = 12;
          piece.anchor.set(0.5);
          piece.x = 0;
-         piece.y = (barheight + 10) * pos;
+         piece.y = barheight * pos;
          return piece;
       };
       let newbarpiece = function(height, tint) {
