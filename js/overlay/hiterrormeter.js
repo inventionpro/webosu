@@ -18,13 +18,13 @@ define([], function () {
       const color50 = 0xffcc22;
       this.lscale = barheight / 2 / r50; // pixel per millisecond
 
-      let newiconpiece = function(name) {
+      let newiconpiece = function(name, pos) {
          let piece = new PIXI.Sprite(Skin[name]);
          piece.width = 10;
          piece.height = 12;
          piece.anchor.set(0.5);
          piece.x = 0;
-         piece.y = 0;
+         piece.y = r300/2 - 5 * pos;
          return piece;
       };
       let newbarpiece = function(height, tint) {
@@ -37,11 +37,11 @@ define([], function () {
          piece.y = 0;
          return piece;
       };
-      this.addChild(newiconpiece('hare.png'));
+      this.addChild(newiconpiece('hare.png', 1));
       this.addChild(newbarpiece(barheight, color50));
       this.addChild(newbarpiece((barheight * r100) / r50, color100));
       this.addChild(newbarpiece((barheight * r300) / r50, color300));
-      this.addChild(newiconpiece('tortoise.png'));
+      this.addChild(newiconpiece('tortoise.png', -1));
 
       let centerline = new PIXI.Sprite(Skin["errormeterdot.png"]);
       centerline.width = 5;
