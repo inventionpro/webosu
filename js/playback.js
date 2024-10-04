@@ -1156,7 +1156,7 @@ define([
           // slider ball immediately emerges
           hit.ball.visible = true;
           hit.ball.alpha = 1;
-          hit.ball.rotation = getDirection(dx, dy, dx1, dy1);
+          hit.ball.angle = getDirection(dx, dy, dx1, dy1);
           // follow circie immediately emerges and gradually enlarges
           hit.follow.visible = true;
           if (this.game.down && isfollowing)
