@@ -24,7 +24,7 @@ define([], function () {
          piece.height = 12;
          piece.anchor.set(0.5);
          piece.x = 0;
-         piece.y = r50/2 - 5 * pos;
+         piece.y = (r50/2 - 5) * pos;
          return piece;
       };
       let newbarpiece = function(height, tint) {
@@ -37,11 +37,11 @@ define([], function () {
          piece.y = 0;
          return piece;
       };
-      this.addChild(newiconpiece('hare.png', 1));
+      this.addChild(newiconpiece('hare.png', -1));
       this.addChild(newbarpiece(barheight, color50));
       this.addChild(newbarpiece((barheight * r100) / r50, color100));
       this.addChild(newbarpiece((barheight * r300) / r50, color300));
-      this.addChild(newiconpiece('tortoise.png', -1));
+      this.addChild(newiconpiece('tortoise.png', 1));
 
       let centerline = new PIXI.Sprite(Skin["errormeterdot.png"]);
       centerline.width = 15;
