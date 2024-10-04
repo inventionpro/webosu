@@ -24,7 +24,7 @@ define([], function () {
          piece.height = 12;
          piece.anchor.set(0.5);
          piece.x = 0;
-         piece.y = (r50/2 - 5) * pos;
+         piece.y = (barheight + 10) * pos;
          return piece;
       };
       let newbarpiece = function(height, tint) {
@@ -44,8 +44,8 @@ define([], function () {
       this.addChild(newiconpiece('tortoise.png', 1));
 
       let centerline = new PIXI.Sprite(Skin["errormeterdot.png"]);
-      centerline.width = 15;
-      centerline.height = 15;
+      centerline.width = 10;
+      centerline.height = 10;
       centerline.anchor.set(0.5);
       centerline.tint = color300;
       centerline.x = 0;
