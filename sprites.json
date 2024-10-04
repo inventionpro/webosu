@@ -77,6 +77,13 @@
       "spriteSourceSize": { "x": 0, "y": 0, "w": 252, "h": 256 },
       "sourceSize": { "w": 252, "h": 256 }
     },
+    "arrow.png": {
+      "frame": { "x": 1, "y": 1892, "w": 75, "h": 120 },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 75, "h": 120 },
+      "sourceSize": { "w": 75, "h": 120 }
+    },
     "bar.png": {
       "frame": { "x": 445, "y": 1826, "w": 133, "h": 50 },
       "rotated": false,
@@ -85,8 +92,8 @@
       "sourceSize": { "w": 133, "h": 50 }
     },
     "barend.png": {
-      "frame": { "x": 966, "y": 925, "w": 25, "h": 50 },
-      "rotated": true,
+      "frame": { "x": 1192, "y": 1812, "w": 25, "h": 50 },
+      "rotated": false,
       "trimmed": false,
       "spriteSourceSize": { "x": 0, "y": 0, "w": 25, "h": 50 },
       "sourceSize": { "w": 25, "h": 50 }
@@ -119,19 +126,33 @@
       "spriteSourceSize": { "x": 0, "y": 0, "w": 8, "h": 300 },
       "sourceSize": { "w": 8, "h": 300 }
     },
+    "errormeterdot.png": {
+      "frame": { "x": 385, "y": 1882, "w": 32, "h": 32 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 32, "h": 32 },
+      "sourceSize": { "w": 32, "h": 32 }
+    },
     "errormeterindicator.png": {
-      "frame": { "x": 1188, "y": 1812, "w": 60, "h": 30 },
+      "frame": { "x": 1152, "y": 361, "w": 60, "h": 30 },
       "rotated": true,
       "trimmed": false,
       "spriteSourceSize": { "x": 0, "y": 0, "w": 60, "h": 30 },
       "sourceSize": { "w": 60, "h": 30 }
     },
     "followpoint.png": {
-      "frame": { "x": 1, "y": 1892, "w": 29, "h": 48 },
-      "rotated": true,
+      "frame": { "x": 1166, "y": 841, "w": 29, "h": 48 },
+      "rotated": false,
       "trimmed": false,
       "spriteSourceSize": { "x": 0, "y": 0, "w": 29, "h": 48 },
       "sourceSize": { "w": 29, "h": 48 }
+    },
+    "hare.png": {
+      "frame": { "x": 1090, "y": 1812, "w": 100, "h": 100 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 100, "h": 100 },
+      "sourceSize": { "w": 100, "h": 100 }
     },
     "hitburst.png": {
       "frame": { "x": 875, "y": 1296, "w": 256, "h": 256 },
@@ -183,7 +204,7 @@
       "sourceSize": { "w": 63, "h": 54 }
     },
     "reversearrow.png": {
-      "frame": { "x": 1090, "y": 1812, "w": 96, "h": 100 },
+      "frame": { "x": 966, "y": 843, "w": 96, "h": 100 },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 100 },
@@ -232,43 +253,43 @@
       "sourceSize": { "w": 70, "h": 80 }
     },
     "score-4.png": {
-      "frame": { "x": 966, "y": 843, "w": 70, "h": 80 },
-      "rotated": false,
+      "frame": { "x": 123, "y": 1892, "w": 70, "h": 80 },
+      "rotated": true,
       "trimmed": false,
       "spriteSourceSize": { "x": 0, "y": 0, "w": 70, "h": 80 },
       "sourceSize": { "w": 70, "h": 80 }
     },
     "score-5.png": {
-      "frame": { "x": 1038, "y": 769, "w": 70, "h": 80 },
-      "rotated": false,
+      "frame": { "x": 205, "y": 1892, "w": 70, "h": 80 },
+      "rotated": true,
       "trimmed": false,
       "spriteSourceSize": { "x": 0, "y": 0, "w": 70, "h": 80 },
       "sourceSize": { "w": 70, "h": 80 }
     },
     "score-6.png": {
-      "frame": { "x": 1038, "y": 851, "w": 70, "h": 80 },
-      "rotated": false,
+      "frame": { "x": 1038, "y": 769, "w": 70, "h": 80 },
+      "rotated": true,
       "trimmed": false,
       "spriteSourceSize": { "x": 0, "y": 0, "w": 70, "h": 80 },
       "sourceSize": { "w": 70, "h": 80 }
     },
     "score-7.png": {
+      "frame": { "x": 1120, "y": 769, "w": 70, "h": 80 },
+      "rotated": true,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 70, "h": 80 },
+      "sourceSize": { "w": 70, "h": 80 }
+    },
+    "score-8.png": {
       "frame": { "x": 1133, "y": 1406, "w": 70, "h": 80 },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": { "x": 0, "y": 0, "w": 70, "h": 80 },
       "sourceSize": { "w": 70, "h": 80 }
     },
-    "score-8.png": {
-      "frame": { "x": 1110, "y": 769, "w": 70, "h": 80 },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": { "x": 0, "y": 0, "w": 70, "h": 80 },
-      "sourceSize": { "w": 70, "h": 80 }
-    },
     "score-9.png": {
-      "frame": { "x": 1110, "y": 851, "w": 70, "h": 80 },
-      "rotated": false,
+      "frame": { "x": 303, "y": 1882, "w": 70, "h": 80 },
+      "rotated": true,
       "trimmed": false,
       "spriteSourceSize": { "x": 0, "y": 0, "w": 70, "h": 80 },
       "sourceSize": { "w": 70, "h": 80 }
@@ -302,7 +323,7 @@
       "sourceSize": { "w": 270, "h": 270 }
     },
     "sliderscorepoint.png": {
-      "frame": { "x": 1188, "y": 1874, "w": 30, "h": 30 },
+      "frame": { "x": 1152, "y": 423, "w": 30, "h": 30 },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": { "x": 0, "y": 0, "w": 30, "h": 30 },
@@ -328,6 +349,13 @@
       "trimmed": false,
       "spriteSourceSize": { "x": 0, "y": 0, "w": 1, "h": 1 },
       "sourceSize": { "w": 1, "h": 1 }
+    },
+    "tortoise.png": {
+      "frame": { "x": 1064, "y": 841, "w": 100, "h": 100 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 100, "h": 100 },
+      "sourceSize": { "w": 100, "h": 100 }
     }
   },
   "animations": {
@@ -349,8 +377,8 @@
     "version": "1.0",
     "image": "img/sprites.png",
     "format": "RGBA8888",
-    "size": { "w": 1219, "h": 1927 },
+    "size": { "w": 1219, "h": 1968 },
     "scale": "1",
-    "smartupdate": "$TexturePacker:SmartUpdate:ea11af5565ceaa2c0ad5cd568c6f9e26:c07b467c237b59cd069f15c1ba1a981d:1eabdf11f75e3a4fe3147baf7b5be24b$"
+    "smartupdate": "$TexturePacker:SmartUpdate:31c86a0d819fc9ee27985495af9378a0:e08177ca8f8e9e134386438b19efb909:1eabdf11f75e3a4fe3147baf7b5be24b$"
   }
 }

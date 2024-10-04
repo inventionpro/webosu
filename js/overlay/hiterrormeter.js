@@ -18,7 +18,16 @@ define([], function () {
       const color50 = 0xffcc22;
       this.lscale = barheight / 2 / r50; // pixel per millisecond
 
-      let newbarpiece = function (height, tint) {
+      let newiconpiece = function(name) {
+         let piece = new PIXI.Sprite(Skin[name]);
+         piece.width = 10;
+         piece.height = 12;
+         piece.anchor.set(0.5);
+         piece.x = 0;
+         piece.y = 0;
+         return piece;
+      };
+      let newbarpiece = function(height, tint) {
          let piece = new PIXI.Sprite(Skin["errormeterbar.png"]);
          piece.width = 2;
          piece.height = height;
@@ -28,20 +37,22 @@ define([], function () {
          piece.y = 0;
          return piece;
       };
+      this.addChild(newiconpiece('hare.png'));
       this.addChild(newbarpiece(barheight, color50));
       this.addChild(newbarpiece((barheight * r100) / r50, color100));
       this.addChild(newbarpiece((barheight * r300) / r50, color300));
+      this.addChild(newiconpiece('tortoise.png'));
 
-      let centerline = new PIXI.Sprite(Skin["errormeterbar.png"]);
+      let centerline = new PIXI.Sprite(Skin["errormeterdot.png"]);
       centerline.width = 5;
-      centerline.height = 2;
-      centerline.anchor.set(0, 0.5);
+      centerline.height = 5;
+      centerline.anchor.set(0.5);
       centerline.tint = color300;
       centerline.x = 0;
       centerline.y = 0;
       this.addChild(centerline);
 
-      this.avgmarker = new PIXI.Sprite(Skin["reversearrow.png"]);
+      this.avgmarker = new PIXI.Sprite(Skin["arrow.png"]);
       this.avgmarker.scale.set(0.08);
       this.avgmarker.anchor.set(0.5);
       this.avgmarker.x = -8;

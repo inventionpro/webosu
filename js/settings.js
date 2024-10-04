@@ -341,10 +341,12 @@ function setOptionPanel() {
     saveToLocal();
   };
   document.getElementById("export-btn").onclick = function() {
-    let mod = {};
-    Object.keys(gamesettings).forEach(k=>{if(!['object','function'].includes(typeof gamesettings[k]))mod[k]=gamesettings[k];});
+    let modified = {};
+    Object.keys(gamesettings).forEach(k => {
+      if (!['object','function'].includes(typeof gamesettings[k])) modified[k] = gamesettings[k];
+    });
     let element = document.createElement('a');
-    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(JSON.stringify(mod, null, 2)));
+    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(JSON.stringify(modified, null, 2)));
     element.setAttribute('download', 'webosu-settings.json');
     element.style.display = 'none';
     document.body.appendChild(element);
@@ -362,7 +364,7 @@ function setOptionPanel() {
     reader.onload = (evt) => {
       try {
         let data = JSON.parse(evt.target.result);
-        Object.keys(data).forEach(k=>gamesettings[k]=data[k])
+        Object.keys(data).forEach(k => gamesettings[k] = data[k])
         gamesettings.loadToGame();
         saveToLocal();
       } catch (err) {
