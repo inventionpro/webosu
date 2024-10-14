@@ -182,7 +182,7 @@ define(["underscore", "osu-audio", "curves/LinearBezier", "curves/CircumscribedC
                 filename: hitSample[4],
               };
             } else {
-              console.log("Attempted to decode unknown hit object type, get yo catch the fruit playin' ass outta here" + hit.type + ": " + line);
+              console.log("Attempted to decode unknown hit object type " + hit.type + ": " + line);
             }
             // fallback to default set if sampleset is illegal
             if (hit.hitSample && hit.hitSample.normalSet > 3) hit.hitSample.normalSet = 0;
