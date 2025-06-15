@@ -1,6 +1,5 @@
 function starname(star) {
-  if (typeof star == "null") return "unknown";
-  if (typeof star == "undefined") return "unknown";
+  if (typeof star == null) return "unknown";
   if (star < 2) return "easy";
   if (star < 2.7) return "normal";
   if (star < 4) return "hard";

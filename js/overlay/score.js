@@ -231,9 +231,9 @@ define([], function () {
 
       this.setSpriteArrayPos = function (arr, x, y) {
          let curx = x;
-         if (arr.useLength > 0) {
-         } // TODO
-         else throw "wtf!";
+         if (arr.useLength <= 0) {
+            throw "wtf!"
+         }
          for (let i = 0; i < arr.useLength; ++i) {
             arr[i].x = curx + (arr[i].scale.x * this.charspacing) / 2;
             arr[i].y = y;
